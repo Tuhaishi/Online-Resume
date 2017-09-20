@@ -69,12 +69,12 @@ function initializeMap() {
 
         locations.push(bio.contacts.location);
 
-        education.schools.forEach(function (school) {
+        education.schools.forEach(function(school) {
             locations.push(school.location);
         });
 
 
-        work.jobs.forEach(function (job) {
+        work.jobs.forEach(function(job) {
             locations.push(job.location);
         });
 
@@ -83,9 +83,9 @@ function initializeMap() {
 
 
     function createMapMarker(placeData) {
-        var lat = placeData.geometry.location.lat(); 
-        var lon = placeData.geometry.location.lng(); 
-        var name = placeData.formatted_address; 
+        var lat = placeData.geometry.location.lat();
+        var lon = placeData.geometry.location.lng();
+        var name = placeData.formatted_address;
         var bounds = window.mapBounds;
 
         var marker = new google.maps.Marker({
@@ -116,7 +116,7 @@ function initializeMap() {
 
         var service = new google.maps.places.PlacesService(map);
 
-        locations.forEach(function (place) {
+        locations.forEach(function(place) {
             var request = {
                 query: place
             };
@@ -133,6 +133,6 @@ function initializeMap() {
 
 }
 window.addEventListener('load', initializeMap);
-window.addEventListener('resize', function (e) {
+window.addEventListener('resize', function(e) {
     map.fitBounds(mapBounds);
 });

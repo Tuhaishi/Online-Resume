@@ -14,14 +14,13 @@ var bio = {
 };
 
 var work = {
-    "jobs": [
-        {
+    "jobs": [{
             "employer": "Saudi Aramco",
             "title": "Business System Analyst",
             "location": "Dhahran, Saudi Arabia",
             "dates": "October 2016 - Present",
             "description": "Currently I'm working as Business System Analyst in my department responsible for studying and analysing the existing systems and gather the required information to upgrade these systems"
-		},
+        },
 
         {
             "employer": "Mentor Graphics Corporation",
@@ -29,46 +28,41 @@ var work = {
             "location": "Wilsonville, OR, USA",
             "dates": "July 2015 - August 2015",
             "description": "I joined Mentor Graphic as a summer intern student from University of Dammam, during my 10 weeks at Mentor Graphics I worked " + "on a C++ project for analysing IC chips structure and compare it against the the logical design for verification purpose"
-		}
-	]
+        }
+    ]
 };
 //TODO here
 var education = {
-    "schools": [
-        {
+    "schools": [{
             "name": "University of Dammam",
             "dates": "2011 - 2016",
             "location": "Khobar, Saudi Arabia",
             "degree": "B.Sc. in Computer Science",
             "majors": ["Computer Science"],
             "url": "www.uwindsor.ca"
-		}
+        }
 
-	],
-    onlineCourses: [
-        {
-            'title': 'Forent End Dev. Nanodegree',
-            'school': 'Udacity',
-            'dates': 'july 2017',
-            'url': 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
-   }
-  ]
+    ],
+    onlineCourses: [{
+        'title': 'Forent End Dev. Nanodegree',
+        'school': 'Udacity',
+        'dates': 'july 2017',
+        'url': 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
+    }]
 };
 
 var projects = {
-    "projects": [
-        {
-            "title": "Portfilio",
-            "dates": "July 2017 - August 2017",
-            "description": "Created an online plain potfilio page as part of my Front-End Web Developement " +
-                "Nanodegree tasks.",
-            "images": ["images/portfilio.png"],
-            "url": "https://github.com/Tuhaishi/portfilio"
-		}
-	]
+    "projects": [{
+        "title": "Portfilio",
+        "dates": "July 2017 - August 2017",
+        "description": "Created an online plain potfilio page as part of my Front-End Web Developement " +
+            "Nanodegree tasks.",
+        "images": ["images/portfilio.png"],
+        "url": "https://github.com/Tuhaishi/portfilio"
+    }]
 };
 
-bio.display = function () {
+bio.display = function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
@@ -106,7 +100,7 @@ bio.display = function () {
 };
 bio.display();
 
-work.display = function () {
+work.display = function() {
 
     if (work.jobs.length > 0) {
         for (var i = 0, len = work.jobs.length; i < len; i++) {
@@ -129,7 +123,7 @@ work.display = function () {
 work.display();
 
 
-projects.display = function () {
+projects.display = function() {
     if (projects.projects.length > 0) {
         for (var i = 0, iLen = projects.projects.length; i < iLen; i++) {
             var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
@@ -153,7 +147,7 @@ projects.display = function () {
 
 projects.display();
 
-education.display = function () {
+education.display = function() {
     if (education.schools.length > 0 || education.onlineCourses.length > 0) {
         for (var i in education.schools) {
 
@@ -189,7 +183,6 @@ education.display = function () {
 };
 
 education.display();
-
 
 
 
